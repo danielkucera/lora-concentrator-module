@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name SX1301)(type Legacy)(uri ${KIPRJMOD}/SX1301.lib)(options "")(descr ""))
+  (lib (name lora-rescue)(type Legacy)(uri ${KIPRJMOD}/lora-rescue.lib)(options "")(descr ""))
 )
