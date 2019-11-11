@@ -762,24 +762,8 @@ F 3 "" H 7450 5500 50  0001 C CNN
 	1    7450 5500
 	1    0    0    -1  
 $EndComp
-$Comp
-L Regulator_Switching:TPS62141 U2
-U 1 1 5DA22CC6
-P 2800 6450
-F 0 "U2" H 2800 7131 50  0000 C CNN
-F 1 "TPS62141" H 2800 7040 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-16-1EP_3x3mm_P0.5mm_EP1.8x1.8mm" H 2950 6000 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/TPS62140.pdf" H 2800 6450 50  0001 C CNN
-	1    2800 6450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2900 5950 2700 5950
 Wire Wire Line
 	2400 5950 2400 6250
-Connection ~ 2700 5950
-Wire Wire Line
-	2700 5950 2400 5950
 $Comp
 L power:+3V3 #PWR0107
 U 1 1 5DA54859
@@ -796,24 +780,7 @@ Wire Wire Line
 Wire Wire Line
 	2100 5950 2400 5950
 Connection ~ 2400 5950
-Wire Wire Line
-	2900 6950 3200 6950
-Wire Wire Line
-	3200 6950 3200 6650
-Wire Wire Line
-	2900 6950 2800 6950
-Connection ~ 2900 6950
 Connection ~ 2800 6950
-Wire Wire Line
-	2800 6950 2700 6950
-Wire Wire Line
-	2400 6450 2400 6550
-Wire Wire Line
-	2400 6950 2700 6950
-Connection ~ 2400 6550
-Wire Wire Line
-	2400 6550 2400 6950
-Connection ~ 2700 6950
 $Comp
 L pspice:INDUCTOR L1
 U 1 1 5DA7588E
@@ -852,24 +819,24 @@ Connection ~ 3800 6450
 $Comp
 L Device:CP C11
 U 1 1 5DAA5D8F
-P 3800 6750
-F 0 "C11" H 3918 6796 50  0000 L CNN
-F 1 "22u" H 3918 6705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3838 6600 50  0001 C CNN
-F 3 "~" H 3800 6750 50  0001 C CNN
-	1    3800 6750
+P 4350 6550
+F 0 "C11" H 4468 6596 50  0000 L CNN
+F 1 "22u" H 4468 6505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4388 6400 50  0001 C CNN
+F 3 "~" H 4350 6550 50  0001 C CNN
+	1    4350 6550
 	1    0    0    -1  
 $EndComp
 Connection ~ 3800 6250
 $Comp
 L power:+1V8 #PWR0109
 U 1 1 5DAD42D4
-P 4150 6250
-F 0 "#PWR0109" H 4150 6100 50  0001 C CNN
-F 1 "+1V8" V 4165 6378 50  0000 L CNN
-F 2 "" H 4150 6250 50  0001 C CNN
-F 3 "" H 4150 6250 50  0001 C CNN
-	1    4150 6250
+P 4450 6250
+F 0 "#PWR0109" H 4450 6100 50  0001 C CNN
+F 1 "+1V8" V 4465 6378 50  0000 L CNN
+F 2 "" H 4450 6250 50  0001 C CNN
+F 3 "" H 4450 6250 50  0001 C CNN
+	1    4450 6250
 	0    1    1    0   
 $EndComp
 $Comp
@@ -905,14 +872,6 @@ Wire Wire Line
 Wire Wire Line
 	2100 6000 2100 5950
 Connection ~ 2100 5950
-Wire Wire Line
-	3800 6600 3800 6550
-Connection ~ 3800 6550
-Wire Wire Line
-	3200 6950 3800 6950
-Wire Wire Line
-	3800 6950 3800 6900
-Connection ~ 3200 6950
 $Comp
 L power:Earth #PWR0111
 U 1 1 5DB1B5F1
@@ -1162,8 +1121,6 @@ F 3 "~" H 4150 6250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3950 6250
-Wire Wire Line
-	3950 6250 4150 6250
 $Comp
 L Connector:Conn_01x10_Male J4
 U 1 1 5DD0E84F
@@ -1227,4 +1184,76 @@ Wire Wire Line
 Wire Wire Line
 	7350 5200 7100 5200
 Connection ~ 7100 5200
+$Comp
+L Regulator_Switching:TPS62140 U2
+U 1 1 5DCB5A82
+P 2800 6450
+F 0 "U2" H 2800 7131 50  0000 C CNN
+F 1 "TPS62140" H 2800 7040 50  0000 C CNN
+F 2 "Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm_ThermalVias" H 2950 6000 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/TPS62140.pdf" H 2800 6450 50  0001 C CNN
+	1    2800 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 6450 2400 6550
+Wire Wire Line
+	2400 6550 2400 6950
+Connection ~ 2400 6550
+Wire Wire Line
+	2800 6950 2700 6950
+Wire Wire Line
+	2400 6950 2700 6950
+Connection ~ 2700 6950
+Wire Wire Line
+	2900 6950 2800 6950
+Connection ~ 2900 6950
+Wire Wire Line
+	2900 5950 2700 5950
+Wire Wire Line
+	2700 5950 2400 5950
+Connection ~ 2700 5950
+Wire Wire Line
+	4350 6400 4350 6250
+Connection ~ 4350 6250
+Wire Wire Line
+	4350 6250 4450 6250
+Wire Wire Line
+	3950 6250 4350 6250
+Wire Wire Line
+	4350 6950 4350 6700
+$Comp
+L Device:R R19
+U 1 1 5DD0E54E
+P 3950 6450
+F 0 "R19" H 4020 6496 50  0000 L CNN
+F 1 "R" H 4020 6405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3880 6450 50  0001 C CNN
+F 3 "~" H 3950 6450 50  0001 C CNN
+	1    3950 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R20
+U 1 1 5DD0EEC4
+P 3950 6800
+F 0 "R20" H 4020 6846 50  0000 L CNN
+F 1 "R" H 4020 6755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3880 6800 50  0001 C CNN
+F 3 "~" H 3950 6800 50  0001 C CNN
+	1    3950 6800
+	1    0    0    -1  
+$EndComp
+Connection ~ 3950 6950
+Wire Wire Line
+	3950 6950 4350 6950
+Wire Wire Line
+	3950 6300 3950 6250
+Wire Wire Line
+	3950 6650 3950 6600
+Wire Wire Line
+	2900 6950 3950 6950
+Wire Wire Line
+	3200 6650 3950 6650
+Connection ~ 3950 6650
 $EndSCHEMATC
